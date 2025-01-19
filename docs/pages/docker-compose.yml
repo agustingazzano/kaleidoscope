@@ -1,0 +1,13 @@
+services:
+  pages:
+    image: 'pages'
+    build:
+      target: deps
+      dockerfile: ./Dockerfile
+    ports:
+      - '5173:5173'
+    # env_file: .env
+    volumes:
+      - ./src:/app/src
+      - ./node_modules:/app/node_modules
+    command: sh -c "pnpm dev --host"
