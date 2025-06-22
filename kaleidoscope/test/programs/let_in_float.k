@@ -1,1 +1,0 @@
-let double a = 4.0 in a + 1;
